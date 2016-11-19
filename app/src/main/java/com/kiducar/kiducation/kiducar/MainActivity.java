@@ -1,26 +1,21 @@
 package com.kiducar.kiducation.kiducar;
 
-<<<<<<< HEAD
-=======
-import android.app.Activity;
->>>>>>> 7e6a80401c2047f1ad6caf24a16605ff3c94f634
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 
-import com.kiducar.kiducation.kiducar.blockcoding.BluetoothHandler;
+import com.kiducar.kiducation.kiducar.bluetooth.BluetoothHandler;
 
-import static com.kiducar.kiducation.kiducar.blockcoding.BluetoothHandler.REQUEST_ENABLE_BT;
+import static com.kiducar.kiducation.kiducar.bluetooth.BluetoothHandler.REQUEST_ENABLE_BT;
 
 public class MainActivity extends AppCompatActivity {
 
-    BluetoothHandler btHandler;
+            BluetoothHandler btHandler;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+            @Override
+            protected void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.activity_main);
 
         Intent blockIntent = new Intent(MainActivity.this, BlockCodingActivity.class);
         startActivity(blockIntent);
