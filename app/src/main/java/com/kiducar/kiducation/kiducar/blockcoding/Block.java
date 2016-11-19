@@ -5,21 +5,28 @@ abstract public class Block {
 
     // blockType 종류 상수 선언
     static final int MOVEBLOCK = 0;
+    static final int ROTATEBLOCK = 1;
+    static final int REPEATBLOCK = 2;
+    static final int CONDITIONBLOCK = 3;
+    static final int DISTANCECHECKBLOCK = 4;
+    static final int PAGEBLOCK = 5;
+    static final int STARTBLOCK = 6;
+    static final int ENDBLOCK = 7;
 
     // 해당 블록이 위치하는 페이지 번호
-    protected int m_pageNum;
+    protected int m_inPageNum;
     // 해당 블록이 위치하는 페이지 번호에서 블록의 위치
-    protected int m_blockNum;
+    protected int m_inBlockNum;
     // 해당 블록의 종류
     protected int m_blockType;
 
     // 생성자
-    public Block(int pageNum, int blockNum, int blockType){
-        m_pageNum = pageNum;
-        m_blockNum = blockNum;
+    public Block(int inPageNum, int inBlockNum, int blockType){
+        m_inPageNum = inPageNum;
+        m_inBlockNum = inBlockNum;
         m_blockType = blockType;
     }
 
     // 추상 메소드. 블록의 중간 코드를 생성. 자식 클래스에서 구현
-    public abstract byte[] makeIntermediateCode();
+    public abstract int[] makeIntermediateCode();
 }
