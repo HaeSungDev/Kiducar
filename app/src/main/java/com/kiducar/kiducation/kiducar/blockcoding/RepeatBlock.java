@@ -9,8 +9,8 @@ public class RepeatBlock extends Block {
     // 반복 횟수
     protected int m_repeatNum;
 
-    public RepeatBlock(int inPageNum, int inBlockNum, PageBlock repeatPage) {
-        super(inPageNum, inBlockNum, REPEATBLOCK);
+    public RepeatBlock(PageBlock repeatPage) {
+        super(REPEATBLOCK);
 
         // 반복 페이지 초기화
         m_repeatPage = repeatPage;
@@ -32,7 +32,7 @@ public class RepeatBlock extends Block {
     public int[] makeIntermediateCode(){
         int repeatPageBlockNum = m_repeatPage.getCurBlockNum();
 
-        int[] data = {m_inPageNum, m_inBlockNum, m_blockType, m_repeatNum, repeatPageBlockNum};
+        int[] data = {m_blockType, m_repeatNum, repeatPageBlockNum};
 
         return data;
     }

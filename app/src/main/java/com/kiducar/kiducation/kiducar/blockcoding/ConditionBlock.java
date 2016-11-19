@@ -13,8 +13,8 @@ public class ConditionBlock extends Block {
     protected Block m_checkBlock;
 
     // 생성자
-    public ConditionBlock(int inPageNum, int inBlockNum, PageBlock okPage, PageBlock noPage) {
-        super(inPageNum, inBlockNum, CONDITIONBLOCK);
+    public ConditionBlock(PageBlock okPage, PageBlock noPage) {
+        super(CONDITIONBLOCK);
 
         // ok, no 페이지 초기화
         m_okPage = okPage;
@@ -41,7 +41,10 @@ public class ConditionBlock extends Block {
 
     // 추상 메소드 구현. 중간 코드 생성
     public int[] makeIntermediateCode(){
-        int[] conditionData = {m_inPageNum, m_inBlockNum, m_blockType};
+        int okPageNum = m_okPage.getCurBlockNum();
+        int noPageNum = m_noPage.getCurBlockNum();
+
+        int[] conditionData = {m_blockType, okPageNum, noPageNum};
         int[] checkBlockData = m_checkBlock.makeIntermediateCode();
 
         int data[] = new int[conditionData.length+checkBlockData.length];

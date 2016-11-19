@@ -11,14 +11,14 @@ public class MoveBlock extends Block{
     protected int m_direction;
 
     // 생성자
-    public MoveBlock(int inPageNum, int inBlockNum, int direction){
-        super(inPageNum, inBlockNum, MOVEBLOCK);
+    public MoveBlock(int direction){
+        super(MOVEBLOCK);
         m_direction = direction;
     }
 
     // 추상 메소드 구현. 중간 코드 생성
     public int[] makeIntermediateCode(){
-        int[] data = {m_inPageNum, m_inBlockNum, m_blockType, m_direction};
+        int[] data = {m_blockType, m_direction};
 
         return data;
     }

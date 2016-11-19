@@ -6,28 +6,19 @@ public class PageBlock extends Block {
     // Block 최대 개수
     final int BLOCKMAXNUM = 18;
 
-    // 페이지 번호
-    protected int m_pageNum;
-
     // Page에 Block들을 담을 배열
     protected Block[] m_blockInPage;
     // 현재 Page에 담고 있는 블럭 개수
     protected int m_curBlockNum;
 
     // 생성자
-    public PageBlock(int inPageNum, int inBlockNum, int pageNum){
-        super(inPageNum, inBlockNum, PAGEBLOCK);
+    public PageBlock(){
+        super(PAGEBLOCK);
 
-        // 페이지 번호 초기화
-        m_pageNum = pageNum;
         // Block 배열 생성
         m_blockInPage = new Block[BLOCKMAXNUM];
         // 초기화
         m_curBlockNum = 0;
-    }
-
-    public int getPageNum(){
-        return m_pageNum;
     }
 
     // 해당 위치에 해당하는 블록 반환

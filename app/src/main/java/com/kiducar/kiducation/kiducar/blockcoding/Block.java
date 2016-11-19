@@ -10,20 +10,12 @@ abstract public class Block {
     static final int CONDITIONBLOCK = 3;
     static final int DISTANCECHECKBLOCK = 4;
     static final int PAGEBLOCK = 5;
-    static final int STARTBLOCK = 6;
-    static final int ENDBLOCK = 7;
 
-    // 해당 블록이 위치하는 페이지 번호
-    protected int m_inPageNum;
-    // 해당 블록이 위치하는 페이지 번호에서 블록의 위치
-    protected int m_inBlockNum;
     // 해당 블록의 종류
     protected int m_blockType;
 
     // 생성자
-    public Block(int inPageNum, int inBlockNum, int blockType){
-        m_inPageNum = inPageNum;
-        m_inBlockNum = inBlockNum;
+    public Block(int blockType){
         m_blockType = blockType;
     }
 
