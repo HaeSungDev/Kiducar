@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_c0c0e9dfde82abe29585139fcc6b108d561d5081\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_bf9d5791ff861084358f2fab9222339baafe1bcc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="292e79885ea20eb45443fee96706e48533a96e4f">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_eebfbaf1c06dc353d14169dfb4b59de4dcac2c33\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_cde8366689ac00a7fefbbb094bc28c5c538fbab6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_e6a36fe6063b2b647e5ed0e2c137ff66350b2115\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_4bfd9ce6e7a7fff6ac2de314babcfd84b7689970\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_abe2063c0c13f934d0bbc531c5559987d390ab08\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_423a8bf63d8f36dc84cbafebc13ba268b2e7d771\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2cbe260d40dcf13856b7e8a5460314640c7e1487">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_7b7a5f7b9282a9158406d148e6fb2981d3b891f0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_247acf11a1ecbf0a44cf94f0ae606c65cdffc4e1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_23b4875743a7ab7a25d7d7daabaaea2c7d01250c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_ac32ec4ee2c805fc4e5948a13d4c2d196619d655\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_46d3373f6a5712c229b8bde605d1e797b411140b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_30b92b844225d920b17f5879dc62e2b71c0fa6b5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_134ccae392ef199d9b77932a6161d567e3d80ce8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_03eb5476731d55affb3d4338368988677354fc41\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\jangbi1\AndroidStudioProjects\kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_567326f6e67db2758b539875d8c2376f4c009229\classes.dex" />
+    </item>
+
+</items>
