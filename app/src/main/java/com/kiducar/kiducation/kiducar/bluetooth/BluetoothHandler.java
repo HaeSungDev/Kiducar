@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.annotation.Size;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
@@ -126,20 +127,31 @@ public class BluetoothHandler {
         return selectedDevice;
     }
 
-    public void sendData(String msg) {
-        msg += "\n";
-
+    // 장치에 데이터를 전송함.
+    public void sendData(byte[] data) {
         try{
-            mOutputStream.write(msg.getBytes());
+            // 데이터 크기를 앞에 붙여서 전송
+            byte[] extendedData = new byte[data.length+4];
+            int len = data.length;
+
+            // int형 길이를 byte에 나눠 넣음(자바는 빅 엔디안 방식으로 저장해서 역순으로 저장)
+            extendedData[3] = (byte)(len >> 24);
+            extendedData[2] = (byte)(len >> 16);
+            extendedData[1] = (byte)(len >> 8);
+            extendedData[0] = (byte)(len);
+
+            mOutputStream.write(extendedData);
         }
         catch(IOException ie){
             Toast.makeText(mActivity.getApplicationContext(), "send fail!!!", Toast.LENGTH_SHORT).show();
-           mActivity.finish();
+            mActivity.finish();
         }
     }
 
+    // 페어링된 장치와 연결
     public void connectToSelectDevice(String selectedDeviceName){
         mRemoteDevice = getDeviceFromBondedList(selectedDeviceName);
+        // 시리얼 통신 서비스 사용
         UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805f9b34fb");
 
         try{
@@ -147,8 +159,8 @@ public class BluetoothHandler {
 
             mSocket.connect();
 
+            // 클라이언트에서 전송만하므로 inputStream을 열지 않음.
             mOutputStream = mSocket.getOutputStream();
-            mInputStream = mSocket.getInputStream();
         }
         catch(IOException ie){
             Toast.makeText(mActivity.getApplicationContext(), "connect fail!!", Toast.LENGTH_SHORT).show();
@@ -156,6 +168,7 @@ public class BluetoothHandler {
         }
     }
 
+    // 블루투스 제거
     public void destroy(){
         try{
             if(mInputStream != null)
