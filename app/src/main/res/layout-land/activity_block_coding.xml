@@ -7,22 +7,320 @@
     android:background="@drawable/background"
     tools:context="com.kiducar.kiducation.kiducar.BlockCodingActivity">
 
-    <GridLayout
-        android:layout_width="450dp"
-        android:layout_height="230dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_centerInParent="true">
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            
+            <FrameLayout
+                android:id="@+id/blockSocket1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.RightArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.RightArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.RightArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.RightArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.RightArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket6"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+            
+        </LinearLayout>
+
+        <com.kiducar.kiducation.kiducar.design.DownArrowView
+            android:layout_width="60dp"
+            android:layout_height="36dp"
+            android:layout_gravity="right"/>
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="75dp"
-            android:layout_height="75dp"/>
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/blockSocket7"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.LeftArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket8"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.LeftArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket9"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.LeftArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket10"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.LeftArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket11"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.LeftArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket12"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <com.kiducar.kiducation.kiducar.design.DownArrowView
+            android:layout_width="60dp"
+            android:layout_height="36dp"
+            android:layout_gravity="left"/>
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </GridLayout>
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/blockSocket13"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.RightArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket14"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.RightArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket15"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.RightArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket16"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.RightArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket17"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <com.kiducar.kiducation.kiducar.design.RightArrowView
+                android:layout_width="36dp"
+                android:layout_height="60dp"/>
+
+            <FrameLayout
+                android:id="@+id/blockSocket18"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="5dp">
+
+                <com.kiducar.kiducation.kiducar.design.BlockSocketView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </RelativeLayout>

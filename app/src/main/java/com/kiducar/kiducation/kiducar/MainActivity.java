@@ -18,8 +18,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent blockCodingIntent = new Intent(getApplicationContext(), BlockCodingActivity.class);
+        startActivity(blockCodingIntent);
+/*
         btHandler = new BluetoothHandler(this);
-        btHandler.enableBluetooth();
+        btHandler.enableBluetooth();*/
     }
 
     @Override
