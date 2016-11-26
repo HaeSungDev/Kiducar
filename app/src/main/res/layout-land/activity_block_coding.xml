@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        android:id="@+id/linearLayout">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -20,8 +21,8 @@
             
             <FrameLayout
                 android:id="@+id/blockSocket1"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -32,12 +33,12 @@
 
             <com.kiducar.kiducation.kiducar.design.RightArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket2"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -48,12 +49,12 @@
 
             <com.kiducar.kiducation.kiducar.design.RightArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket3"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -64,12 +65,12 @@
 
             <com.kiducar.kiducation.kiducar.design.RightArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket4"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -80,12 +81,12 @@
 
             <com.kiducar.kiducation.kiducar.design.RightArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket5"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -96,12 +97,12 @@
 
             <com.kiducar.kiducation.kiducar.design.RightArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket6"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -124,8 +125,8 @@
 
             <FrameLayout
                 android:id="@+id/blockSocket7"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -136,12 +137,12 @@
 
             <com.kiducar.kiducation.kiducar.design.LeftArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket8"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -152,12 +153,12 @@
 
             <com.kiducar.kiducation.kiducar.design.LeftArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket9"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -168,12 +169,12 @@
 
             <com.kiducar.kiducation.kiducar.design.LeftArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket10"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -184,12 +185,12 @@
 
             <com.kiducar.kiducation.kiducar.design.LeftArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket11"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -200,12 +201,12 @@
 
             <com.kiducar.kiducation.kiducar.design.LeftArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket12"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -228,8 +229,8 @@
 
             <FrameLayout
                 android:id="@+id/blockSocket13"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -240,12 +241,12 @@
 
             <com.kiducar.kiducation.kiducar.design.RightArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket14"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -256,12 +257,12 @@
 
             <com.kiducar.kiducation.kiducar.design.RightArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket15"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -272,12 +273,12 @@
 
             <com.kiducar.kiducation.kiducar.design.RightArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket16"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -288,12 +289,12 @@
 
             <com.kiducar.kiducation.kiducar.design.RightArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket17"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -304,12 +305,12 @@
 
             <com.kiducar.kiducation.kiducar.design.RightArrowView
                 android:layout_width="36dp"
-                android:layout_height="60dp"/>
+                android:layout_height="65dp"/>
 
             <FrameLayout
                 android:id="@+id/blockSocket18"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:padding="5dp">
 
                 <com.kiducar.kiducation.kiducar.design.BlockSocketView
@@ -322,6 +323,23 @@
 
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/blockListView1"
+        android:layout_width="70dp"
+        android:layout_height="285dp"
+        
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="#F05A8CC8"/>
+
+    <ListView
+        android:id="@+id/blockListView2"
+        android:layout_width="70dp"
+        android:layout_height="285dp"
+
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="#F05A8CC8"/>
 
 </RelativeLayout>
 

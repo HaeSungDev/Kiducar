@@ -7,4 +7,10 @@
     android:layout_height="match_parent"
     tools:context="com.kiducar.kiducation.kiducar.MainActivity">
 
+    <Button
+        android:text="Send"
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 </RelativeLayout>

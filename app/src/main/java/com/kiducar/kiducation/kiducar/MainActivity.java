@@ -11,18 +11,18 @@ import static com.kiducar.kiducation.kiducar.bluetooth.BluetoothHandler.REQUEST_
 public class MainActivity extends AppCompatActivity {
 
     // 블루투스 통신을 위한 핸들러
-    BluetoothHandler btHandler;
+    private BluetoothHandler btHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Intent blockCodingIntent = new Intent(getApplicationContext(), BlockCodingActivity.class);
-        startActivity(blockCodingIntent);
 /*
         btHandler = new BluetoothHandler(this);
         btHandler.enableBluetooth();*/
+
+        Intent blockCodingIntent = new Intent(getApplicationContext(), BlockCodingActivity.class);
+        startActivity(blockCodingIntent);
     }
 
     @Override
@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     // 액티비티가 종료될때 블루투스 제거
     protected void onDestroy() {
-        btHandler.destroy();
+        if(btHandler != null)
+            btHandler.destroy();
         super.onDestroy();
     }
 }

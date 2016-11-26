@@ -4,8 +4,8 @@ package com.kiducar.kiducation.kiducar.blockcoding;
 public class MoveBlock extends Block{
 
     // m_direction의 종류 상수 선언
-    static final int FORWARD = 0;
-    static final int BACKWARD = 1;
+    public static final int FORWARD = 0;
+    public static final int BACKWARD = 1;
 
     // 이동 방향
     protected int m_direction;

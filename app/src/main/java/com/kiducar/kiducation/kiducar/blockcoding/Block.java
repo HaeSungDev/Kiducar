@@ -4,12 +4,12 @@ package com.kiducar.kiducation.kiducar.blockcoding;
 abstract public class Block {
 
     // blockType 종류 상수 선언
-    static final int MOVEBLOCK = 0;
-    static final int ROTATEBLOCK = 1;
-    static final int REPEATBLOCK = 2;
-    static final int CONDITIONBLOCK = 3;
-    static final int DISTANCECHECKBLOCK = 4;
-    static final int PAGEBLOCK = 5;
+    public static final int MOVEBLOCK = 0;
+    public static final int ROTATEBLOCK = 1;
+    public static final int REPEATBLOCK = 2;
+    public static final int CONDITIONBLOCK = 3;
+    public static final int DISTANCECHECKBLOCK = 4;
+    public static final int PAGEBLOCK = 5;
 
     // 해당 블록의 종류
     protected int m_blockType;

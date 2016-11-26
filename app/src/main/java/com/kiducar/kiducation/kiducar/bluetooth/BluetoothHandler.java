@@ -32,8 +32,6 @@ public class BluetoothHandler {
     private BluetoothDevice mRemoteDevice;
     // 연결 소켓
     private BluetoothSocket mSocket;
-    // 소켓 입력 스트림
-    InputStream mInputStream;
     // 소켓 출력 스트림
     OutputStream mOutputStream;
 
@@ -46,7 +44,6 @@ public class BluetoothHandler {
         mPairedDevicesCount = 0;
         mRemoteDevice = null;
         mSocket = null;
-        mInputStream = null;
         mOutputStream = null;
     }
 
@@ -61,8 +58,7 @@ public class BluetoothHandler {
             if (!mBluetoothAdapter.isEnabled()) {
                 Intent i = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 mActivity.startActivityForResult(i, REQUEST_ENABLE_BT);
-            }
-            else{
+            } else {
                 selectDevice();
             }
         }
@@ -129,20 +125,23 @@ public class BluetoothHandler {
 
     // 장치에 데이터를 전송함.
     public void sendData(byte[] data) {
-        try{
+        try {
             // 데이터 크기를 앞에 붙여서 전송
-            byte[] extendedData = new byte[data.length+4];
+            byte[] extendedData = new byte[data.length + 4];
             int len = data.length;
 
             // int형 길이를 byte에 나눠 넣음(자바는 빅 엔디안 방식으로 저장해서 역순으로 저장)
-            extendedData[3] = (byte)(len >> 24);
-            extendedData[2] = (byte)(len >> 16);
-            extendedData[1] = (byte)(len >> 8);
-            extendedData[0] = (byte)(len);
+            extendedData[3] = (byte) (len >> 24);
+            extendedData[2] = (byte) (len >> 16);
+            extendedData[1] = (byte) (len >> 8);
+            extendedData[0] = (byte) (len);
+
+            for (int i = 4; i < len + 4; i++) {
+                extendedData[i] = data[i - 4];
+            }
 
             mOutputStream.write(extendedData);
-        }
-        catch(IOException ie){
+        } catch (IOException ie) {
             Toast.makeText(mActivity.getApplicationContext(), "send fail!!!", Toast.LENGTH_SHORT).show();
             mActivity.finish();
         }
@@ -171,8 +170,6 @@ public class BluetoothHandler {
     // 블루투스 제거
     public void destroy(){
         try{
-            if(mInputStream != null)
-                mInputStream.close();
             if(mOutputStream != null)
                 mOutputStream.close();
             if(mSocket != null)

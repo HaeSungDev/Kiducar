@@ -11,10 +11,6 @@ import android.view.View;
 
 import com.kiducar.kiducation.kiducar.R;
 
-/**
- * Created by HaeSung on 2016-11-23.
- */
-
 public class LeftArrowView extends View {
     public LeftArrowView(Context context) {
         super(context);
