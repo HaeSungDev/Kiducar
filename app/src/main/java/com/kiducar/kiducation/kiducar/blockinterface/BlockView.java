@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 
 // 화면에 표시할 블록 뷰
@@ -14,47 +15,53 @@ import android.view.View;
 public class BlockView extends View {
 
     // 블록 그림
-    private int m_resDrawable;
+    private Bitmap m_bitmap;
     // 블록 종류
     private int m_blockType;
     // 방향있는 블록의 방향
     private int m_direction;
+    // 터치 가능 상태인지 체크
+    private boolean m_isTouchable;
 
     public BlockView(Context context) {
         super(context);
-        m_resDrawable = 0;
         m_blockType = -1;
         m_direction = -1;
+        m_isTouchable = true;
     }
 
     public BlockView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        m_resDrawable = 0;
         m_blockType = -1;
         m_direction = -1;
+        m_isTouchable = true;
     }
 
     public BlockView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        m_resDrawable = 0;
         m_blockType = -1;
         m_direction = -1;
+        m_isTouchable = true;
     }
 
     public BlockView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        m_resDrawable = 0;
         m_blockType = -1;
         m_direction = -1;
+        m_isTouchable = true;
     }
 
-    public void setResDrawable(int resDrawable) {
-        m_resDrawable = resDrawable;
+    public void setBitmap(Bitmap resDrawable) {
+        m_bitmap = resDrawable;
         invalidate();
     }
 
-    public int getResDrawable(){
-        return m_resDrawable;
+    public void setIsTouchanble(boolean isTouchable){
+        m_isTouchable = isTouchable;
+    }
+
+    public Bitmap getBitmap(){
+        return m_bitmap;
     }
 
     public void setBlockType(int blockType, int direction){
@@ -73,26 +80,26 @@ public class BlockView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        if(m_resDrawable != 0) {
-            Bitmap socketBitmap = BitmapFactory.decodeResource(getContext().getResources(), m_resDrawable);
+        if(m_bitmap != null) {
 
-            int w = socketBitmap.getWidth();
-            int h = socketBitmap.getHeight();
-
-            int[] pixels = new int[w * h];
-            socketBitmap.getPixels(pixels, 0, w, 0, 0, w, h);
-            for (int i = 0; i < pixels.length; i++) {
-                if (pixels[i] == Color.RED) {
-                    pixels[i] = Color.TRANSPARENT;
-                }
-            }
-
-            Bitmap printBitmap = Bitmap.createBitmap(pixels, 0, w, w, h, Bitmap.Config.ARGB_8888);
+            int w = m_bitmap.getWidth();
+            int h = m_bitmap.getHeight();
 
             Rect src = new Rect(0, 0, w, h);
             Rect dst = new Rect(0, 0, canvas.getWidth(), canvas.getHeight());
 
-            canvas.drawBitmap(printBitmap, src, dst, null);
+            canvas.drawBitmap(m_bitmap, src, dst, null);
         }
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if(m_isTouchable) {
+            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                this.startDrag(null, new View.DragShadowBuilder(this), this, 0);
+            }
+        }
+
+        return super.onTouchEvent(event);
     }
 }

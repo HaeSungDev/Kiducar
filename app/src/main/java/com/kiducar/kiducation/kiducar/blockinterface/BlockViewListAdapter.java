@@ -53,7 +53,7 @@ public class BlockViewListAdapter extends BaseAdapter {
         }
 
         BlockView blockView = (BlockView)convertView.findViewById(R.id.blockView);
-        blockView.setResDrawable(m_items.get(position).m_resDrawable);
+        blockView.setBitmap(m_items.get(position).m_bitmap);
         blockView.setBlockType(m_items.get(position).m_blockType, m_items.get(position).m_direction);
 
         return convertView;

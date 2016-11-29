@@ -16,6 +16,10 @@ public class MoveBlock extends Block{
         m_direction = direction;
     }
 
+    public int getDirection(){
+        return m_direction;
+    }
+
     // 추상 메소드 구현. 중간 코드 생성
     public int[] makeIntermediateCode(){
         int[] data = {m_blockType, m_direction};

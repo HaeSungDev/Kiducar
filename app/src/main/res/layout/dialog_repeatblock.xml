@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="반복 횟수 입력"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/repeatNumEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:background="#FFFFD2"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/repeatPageBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="반복 페이지 설정"/>
+
+</LinearLayout>

@@ -1,7 +1,9 @@
 package com.kiducar.kiducation.kiducar.blockcoding;
 
+import java.io.Serializable;
+
 // 블록 추상 클래스. 모든 블록들이 상속받는 클래스
-abstract public class Block {
+abstract public class Block implements Serializable {
 
     // blockType 종류 상수 선언
     public static final int MOVEBLOCK = 0;
@@ -17,6 +19,10 @@ abstract public class Block {
     // 생성자
     public Block(int blockType){
         m_blockType = blockType;
+    }
+
+    public int getBlockType(){
+        return m_blockType;
     }
 
     // 추상 메소드. 블록의 중간 코드를 생성. 자식 클래스에서 구현
