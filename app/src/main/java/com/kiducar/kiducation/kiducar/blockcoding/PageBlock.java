@@ -21,6 +21,15 @@ public class PageBlock extends Block {
         m_curBlockNum = 0;
     }
 
+    // 해당 위치에 해당하는 블록 설정
+    public void setBlock(Block block, int blockNum){
+        if(blockNum < 0 || blockNum >= BLOCKMAXNUM){
+            return;
+        }
+
+        m_blockInPage[blockNum] = block;
+    }
+
     // 해당 위치에 해당하는 블록 반환
     public Block getBlock(int blockNum){
         if(blockNum < 0 || blockNum >= m_curBlockNum){
@@ -43,7 +52,7 @@ public class PageBlock extends Block {
 
     // 해당 위치에 해당하는 블록을 제거함
     public boolean deleteBlock(int blockNum){
-        if(m_curBlockNum <= 0 || m_curBlockNum <= blockNum)
+        if(blockNum < 0 || m_curBlockNum <= blockNum)
             return false;
 
         // 현재 블록 개수를 줄임

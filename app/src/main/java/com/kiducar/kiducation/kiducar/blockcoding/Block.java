@@ -8,10 +8,11 @@ abstract public class Block implements Serializable {
     // blockType 종류 상수 선언
     public static final int MOVEBLOCK = 0;
     public static final int ROTATEBLOCK = 1;
-    public static final int REPEATBLOCK = 2;
-    public static final int CONDITIONBLOCK = 3;
-    public static final int DISTANCECHECKBLOCK = 4;
-    public static final int PAGEBLOCK = 5;
+    public static final int STOPBLOCK = 2;
+    public static final int REPEATBLOCK = 3;
+    public static final int CONDITIONBLOCK = 4;
+    public static final int DISTANCECHECKBLOCK = 5;
+    public static final int PAGEBLOCK = 6;
 
     // 해당 블록의 종류
     protected int m_blockType;

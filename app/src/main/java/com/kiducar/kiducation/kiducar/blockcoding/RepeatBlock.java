@@ -9,13 +9,13 @@ public class RepeatBlock extends Block {
     // 반복 횟수
     protected int m_repeatNum;
 
-    public RepeatBlock(int repeatNum) {
+    public RepeatBlock() {
         super(REPEATBLOCK);
 
         // 반복 페이지 초기화
         m_repeatPage = null;
         // 반복 횟수 초기화
-        m_repeatNum = repeatNum;
+        m_repeatNum = 0;
     }
 
     // 반복 횟수 설정

@@ -17,6 +17,8 @@ public class DistanceCheckBlock extends Block {
     public void setDistance(int distance){
         m_distance = distance;
     }
+    // 거리 반환
+    public int getDistance() { return m_distance; }
 
     // 추상 메소드 구현. 중간 코드 생성
     public int[] makeIntermediateCode(){

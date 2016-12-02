@@ -365,7 +365,7 @@
         
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:background="#F05A8CC8"/>
+        android:background="@drawable/blocklist"/>
 
     <ListView
         android:id="@+id/blockListView2"
@@ -374,7 +374,64 @@
 
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:background="#F05A8CC8"/>
+        android:background="@drawable/blocklist"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/startBtn"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="코드 실행"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:background="@drawable/button" style="@style/ButtonText"/>
+
+        <Button
+            android:id="@+id/stopBtn"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:text="실행 중지"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:background="@drawable/button" style="@style/ButtonText"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/questionBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/question"
+        />
+
+    <Button
+        android:id="@+id/quitBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/quit"
+        android:onClick="onClickQuit"
+        />
+
+    <com.kiducar.kiducation.kiducar.design.DesignView
+        android:id="@+id/titleView"
+        android:layout_width="400dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/title"/>
 
 </RelativeLayout>
 

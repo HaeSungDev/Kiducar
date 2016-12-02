@@ -56,7 +56,7 @@ public class BlockView extends View {
         invalidate();
     }
 
-    public void setIsTouchanble(boolean isTouchable){
+    public void setIsTouchable(boolean isTouchable){
         m_isTouchable = isTouchable;
     }
 

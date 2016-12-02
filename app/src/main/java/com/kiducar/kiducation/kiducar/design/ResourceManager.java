@@ -11,8 +11,8 @@ public class ResourceManager {
 
     // 순서대로 비트맵 상수 지정
     public interface BITMAP {
-        int BLOCKSOCKET = 0, DOWNARROW = 1, LEFTARROW = 2, RIGHTARROW = 3, FORWARDBLOCK = 4, BACKWORDBLOCK = 5;
-        int LEFTROTATEBLOCK = 6, RIGHTROTATEBLOCK = 7, REPEATBLOCK = 8, CONDITIONBLOCK = 9, DISTANCECHECKBLOCK = 10, PAGEBLOCK = 11;
+        int BLOCKSOCKET = 0, DOWNARROW = 1, LEFTARROW = 2, RIGHTARROW = 3, FORWARDBLOCK = 4, BACKWORDBLOCK = 5, LEFTROTATEBLOCK = 6;
+        int RIGHTROTATEBLOCK = 7, STOPBLOCK = 8, REPEATBLOCK = 9, CONDITIONBLOCK = 10, DISTANCECHECKBLOCK = 11, PAGEBLOCK = 12, TITLE = 13;
     }
 
     // ResourceManager 클래스의 단 하나의 객체, 함수를 통해 접근가능
@@ -32,7 +32,7 @@ public class ResourceManager {
 
     private ResourceManager(Resources resources){
         m_resources = resources;
-        m_bitmap = new Bitmap[12];
+        m_bitmap = new Bitmap[14];
 
         for(int i = 0;i < m_bitmap.length;i++){
             m_bitmap[i] = BitmapFactory.decodeResource(m_resources, m_resources.getIdentifier("img"+(i+1), "drawable", "com.kiducar.kiducation.kiducar"));

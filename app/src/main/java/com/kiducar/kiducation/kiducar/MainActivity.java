@@ -4,22 +4,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.kiducar.kiducation.kiducar.blockinterface.ExecuteModule;
 import com.kiducar.kiducation.kiducar.bluetooth.BluetoothHandler;
 
 import static com.kiducar.kiducation.kiducar.bluetooth.BluetoothHandler.REQUEST_ENABLE_BT;
 
 public class MainActivity extends AppCompatActivity {
 
-    // 블루투스 통신을 위한 핸들러
-    private BluetoothHandler btHandler;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-/*
-        btHandler = new BluetoothHandler(this);
-        btHandler.enableBluetooth();*/
+
+        BluetoothHandler btHandler = new BluetoothHandler(this);
+        ExecuteModule.getInstance().setBluetoothHandler(btHandler);
+        btHandler.enableBluetooth();
 
         Intent blockCodingIntent = new Intent(getApplicationContext(), BlockCodingActivity.class);
         startActivity(blockCodingIntent);
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             case REQUEST_ENABLE_BT :
                 if(resultCode == RESULT_OK){
                     //블루투스가 활성 상태로 변경
-                    btHandler.selectDevice();
+                    ExecuteModule.getInstance().getBluetoothHandler().selectDevice();
                 }
                 else if(resultCode == RESULT_CANCELED){
                     //블루투스가 비활성 상태일 경우
@@ -46,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     // 액티비티가 종료될때 블루투스 제거
     protected void onDestroy() {
-        if(btHandler != null)
-            btHandler.destroy();
+        if(ExecuteModule.getInstance().getBluetoothHandler() != null)
+            ExecuteModule.getInstance().getBluetoothHandler().destroy();
         super.onDestroy();
     }
 }

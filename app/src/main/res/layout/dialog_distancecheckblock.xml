@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="170dp"
-    android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="반복 횟수 입력"
+        android:text="체크할 거리 입력"
         android:textSize="15sp"
         android:textStyle="bold"/>
 
     <EditText
-        android:id="@+id/repeatNumEdit"
+        android:id="@+id/distanceEdit"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:inputType="numberDecimal"
         android:background="#FFFFD2"
-        android:maxLength="10"
+        android:maxLength="3"
         android:ems="10" />
-
-    <Button
-        android:id="@+id/repeatPageBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="반복 코드 설정"/>
 
 </LinearLayout>

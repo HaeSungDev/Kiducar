@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ListView
+        android:id="@+id/checkBlockListView"
+        android:layout_width="70dp"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/blocklist"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="10dp">
+
+
+        <FrameLayout
+            android:id="@+id/checkBlockSocket"
+            android:layout_gravity="center"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:padding="5dp">
+
+            <com.kiducar.kiducation.kiducar.design.DesignView
+                android:id="@+id/checkBlockSocketView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/okPageBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="조건 코드(OK)"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/noPageBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="조건 코드(NO)"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

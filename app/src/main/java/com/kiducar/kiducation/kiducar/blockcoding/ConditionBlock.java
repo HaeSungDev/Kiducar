@@ -13,31 +13,38 @@ public class ConditionBlock extends Block {
     protected Block m_checkBlock;
 
     // 생성자
-    public ConditionBlock(PageBlock okPage, PageBlock noPage) {
+    public ConditionBlock() {
         super(CONDITIONBLOCK);
 
         // ok, no 페이지 초기화
-        m_okPage = okPage;
-        m_noPage = noPage;
+        m_okPage = null;
+        m_noPage = null;
 
         // 조건 체크 블록 초기화
         m_checkBlock = null;
     }
 
+    // ok 페이지 설정
+    public void setOKPage(PageBlock okPage) { m_okPage = okPage; }
     // ok 페이지 반환
-    PageBlock getOkPage() {
+    public PageBlock getOkPage() {
         return m_okPage;
     }
 
+    // no 페이지 설정
+    public void setNOPage(PageBlock noPage) { m_noPage = noPage; }
     // no 페이지 반환
-    PageBlock getNoPage() {
+    public PageBlock getNoPage() {
         return m_noPage;
     }
 
     // 체크 블록 설정
-    public void setBlock(Block checkBlock){
+    public void setCheckBlock(Block checkBlock){
         m_checkBlock = checkBlock;
     }
+
+    // 체크 블록 반환
+    public Block getCheckBlock() { return m_checkBlock; }
 
     // 추상 메소드 구현. 중간 코드 생성
     public int[] makeIntermediateCode(){
