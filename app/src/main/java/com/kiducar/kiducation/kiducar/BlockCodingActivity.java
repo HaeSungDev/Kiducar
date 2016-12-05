@@ -3,6 +3,8 @@ package com.kiducar.kiducation.kiducar;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -74,8 +76,18 @@ public class BlockCodingActivity extends AppCompatActivity {
         curBlockSocketNum = 0;
         createBlockSocket();
 
-        // 해당 액티비티가 첫 블록코딩 페이지라면 실행 모듈의 메인페이지에 페이지블록을 설정함
-        ExecuteModule.getInstance().setMainPageBlock(pageBlock);
+        // 해당 액티비티가 첫 페이지라면 실행, 중지 버튼을 보이게 한다.
+        if(!ExecuteModule.getInstance().getIsFirstPageOpen()){
+            findViewById(R.id.startExecuteBtn).setVisibility(View.VISIBLE);
+            findViewById(R.id.startExecuteBtn).setClickable(true);
+            findViewById(R.id.stopExecuteBtn).setVisibility(View.VISIBLE);
+            findViewById(R.id.startExecuteBtn).setClickable(true);
+
+            // 해당 액티비티가 첫 블록코딩 페이지라면 실행 모듈의 메인페이지에 페이지블록을 설정함
+            ExecuteModule.getInstance().setMainPageBlock(pageBlock);
+
+            ExecuteModule.getInstance().setIsFirstPageOpen(true);
+        }
     }
 
     // 화살표, 블록 소켓을 화면에 나타내는 함수
@@ -128,42 +140,86 @@ public class BlockCodingActivity extends AppCompatActivity {
     }
 
     // 페이지에 새로운 블록 추가
-    public void addBlockToPage(int blockType, int direction, int blockIndex){
+    public void addBlockToPage(int blockType, int direction, int blockIndex, boolean isChange){
         Block block = null;
         switch(blockType){
             case Block.MOVEBLOCK:
                 block = new MoveBlock(direction);
-                pageBlock.insertBlock(block);
+                if(isChange)
+                    pageBlock.setBlock(block, blockIndex);
+                else
+                    pageBlock.insertBlock(block);
                 break;
 
             case Block.ROTATEBLOCK:
                 block = new RotateBlock(direction);
-                pageBlock.insertBlock(block);
+                if(isChange)
+                    pageBlock.setBlock(block, blockIndex);
+                else
+                    pageBlock.insertBlock(block);
                 break;
 
             case Block.STOPBLOCK:
                 block = new StopBlock();
-                pageBlock.insertBlock(block);
+                if(isChange)
+                    pageBlock.setBlock(block, blockIndex);
+                else
+                    pageBlock.insertBlock(block);
                 break;
 
             case Block.REPEATBLOCK:
                 block = new RepeatBlock();
-                pageBlock.insertBlock(block);
+                if(isChange)
+                    pageBlock.setBlock(block, blockIndex);
+                else
+                    pageBlock.insertBlock(block);
                 repeatBlockDialogBox(blockIndex);
                 break;
 
             case Block.CONDITIONBLOCK:
                 block = new ConditionBlock();
-                pageBlock.insertBlock(block);
+                if(isChange)
+                    pageBlock.setBlock(block, blockIndex);
+                else
+                    pageBlock.insertBlock(block);
                 conditionBlockDialogBox(blockIndex);
                 break;
 
             case Block.PAGEBLOCK:
                 block = new PageBlock();
-                pageBlock.insertBlock(block);
+                if(isChange)
+                    pageBlock.setBlock(block, blockIndex);
+                else
+                    pageBlock.insertBlock(block);
                 pageBlockDialogBox(blockIndex);
                 break;
         }
+    }
+
+    // 위치에 해당하는 블록 제거
+    public void deleteBlock(int blockIndex){
+        // 현재 위치의 소켓에서 블록뷰를 제거
+
+        blockSocket[blockIndex].removeViewAt(1);
+        // 다음 위치 소켓 블록에서 앞으로 하나씩 옮겨줌
+        BlockView moveBlockView;
+        curBlockSocketNum--;
+        for(int i = blockIndex;i < curBlockSocketNum;i++) {
+            moveBlockView = (BlockView) blockSocket[i + 1].getChildAt(1);
+            // index 번호가 바뀌었으므로 클릭 이벤트 재설정
+            final int blockType = moveBlockView.getBlockType();
+            final int newIndex = i;
+            moveBlockView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    blockClickEvent(blockType, newIndex);
+                }
+            });
+            blockSocket[i+1].removeView(moveBlockView);
+            blockSocket[i].addView(moveBlockView);
+        }
+        // 현재 블록 위치를 지우고 뒤에있는 블록들을 끌어넣음
+        pageBlock.deleteBlock(blockIndex);
     }
 
     // 일반 블록에 대한 처리를 해줄 대화상자
@@ -183,28 +239,7 @@ public class BlockCodingActivity extends AppCompatActivity {
         builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                // 현재 위치의 소켓에서 블록뷰를 제거
-
-                blockSocket[index].removeViewAt(1);
-                // 다음 위치 소켓 블록에서 앞으로 하나씩 옮겨줌
-                BlockView moveBlockView;
-                curBlockSocketNum--;
-                for(int i = index;i < curBlockSocketNum;i++) {
-                    moveBlockView = (BlockView) blockSocket[i + 1].getChildAt(1);
-                    // index 번호가 바뀌었으므로 클릭 이벤트 재설정
-                    final int blockType = moveBlockView.getBlockType();
-                    final int newIndex = i;
-                    moveBlockView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            blockClickEvent(blockType, newIndex);
-                        }
-                    });
-                    blockSocket[i+1].removeView(moveBlockView);
-                    blockSocket[i].addView(moveBlockView);
-                }
-                // 현재 블록 위치를 지우고 뒤에있는 블록들을 끌어넣음
-                pageBlock.deleteBlock(index);
+                deleteBlock(index);
             }
         });
         builder.setNegativeButton("취소", null);
@@ -281,27 +316,7 @@ public class BlockCodingActivity extends AppCompatActivity {
                 negativeButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        // 현재 위치의 소켓에서 블록뷰를 제거
-                        blockSocket[index].removeViewAt(1);
-                        // 다음 위치 소켓 블록에서 앞으로 하나씩 옮겨줌
-                        BlockView moveBlockView;
-                        curBlockSocketNum--;
-                        for(int i = index;i < curBlockSocketNum;i++) {
-                            moveBlockView = (BlockView) blockSocket[i + 1].getChildAt(1);
-                            // index 번호가 바뀌었으므로 클릭 이벤트 재설정
-                            final int blockType = moveBlockView.getBlockType();
-                            final int newIndex = i;
-                            moveBlockView.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    blockClickEvent(blockType, newIndex);
-                                }
-                            });
-                            blockSocket[i+1].removeView(moveBlockView);
-                            blockSocket[i].addView(moveBlockView);
-                        }
-                        // 현재 블록 위치를 지우고 뒤에있는 블록들을 끌어넣음
-                        pageBlock.deleteBlock(index);
+                        deleteBlock(index);
                         // 대화상자종료
                         alertDialog.dismiss();
                     }
@@ -561,27 +576,7 @@ public class BlockCodingActivity extends AppCompatActivity {
                 negativeButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        // 현재 위치의 소켓에서 블록뷰를 제거
-                        blockSocket[index].removeViewAt(1);
-                        // 다음 위치 소켓 블록에서 앞으로 하나씩 옮겨줌
-                        BlockView moveBlockView;
-                        curBlockSocketNum--;
-                        for(int i = index;i < curBlockSocketNum;i++) {
-                            moveBlockView = (BlockView) blockSocket[i + 1].getChildAt(1);
-                            // index 번호가 바뀌었으므로 클릭 이벤트 재설정
-                            final int blockType = moveBlockView.getBlockType();
-                            final int newIndex = i;
-                            moveBlockView.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    blockClickEvent(blockType, newIndex);
-                                }
-                            });
-                            blockSocket[i+1].removeView(moveBlockView);
-                            blockSocket[i].addView(moveBlockView);
-                        }
-                        // 현재 블록 위치를 지우고 뒤에있는 블록들을 끌어넣음
-                        pageBlock.deleteBlock(index);
+                        deleteBlock(index);
                         // 대화상자종료
                         alertDialog.dismiss();
                     }
@@ -640,27 +635,7 @@ public class BlockCodingActivity extends AppCompatActivity {
         builder.setNegativeButton("삭제", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                // 현재 위치의 소켓에서 블록뷰를 제거
-                blockSocket[index].removeViewAt(1);
-                // 다음 위치 소켓 블록에서 앞으로 하나씩 옮겨줌
-                BlockView moveBlockView;
-                curBlockSocketNum--;
-                for(int i = index;i < curBlockSocketNum;i++) {
-                    moveBlockView = (BlockView) blockSocket[i + 1].getChildAt(1);
-                    // index 번호가 바뀌었으므로 클릭 이벤트 재설정
-                    final int blockType = moveBlockView.getBlockType();
-                    final int newIndex = i;
-                    moveBlockView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            blockClickEvent(blockType, newIndex);
-                        }
-                    });
-                    blockSocket[i+1].removeView(moveBlockView);
-                    blockSocket[i].addView(moveBlockView);
-                }
-                // 현재 블록 위치를 지우고 뒤에있는 블록들을 끌어넣음
-                pageBlock.deleteBlock(index);
+                deleteBlock(index);
             }
         });
 
@@ -785,20 +760,33 @@ public class BlockCodingActivity extends AppCompatActivity {
                             }
                         });
 
-                        // 소켓 레이아웃에 추가
-                        frameLayout.addView(newBlockView);
+                        if(index == curBlockSocketNum) {
+                            // 소켓 레이아웃에 추가
+                            frameLayout.addView(newBlockView);
 
-                        // 페이지에 해당 블록 추가
-                        addBlockToPage(blockView.getBlockType(), blockView.getDirection(), index);
+                            // 페이지에 해당 블록 추가
+                            addBlockToPage(blockView.getBlockType(), blockView.getDirection(), index, false);
 
-                        curBlockSocketNum++;
+                            curBlockSocketNum++;
+                        }
+                        else if(index < curBlockSocketNum) {
+                            // 소켓 레이아웃에 들어있던 블록 제거
+                            frameLayout.removeViewAt(1);
+
+                            // 소켓 레이아웃에 새 블록 추가
+                            frameLayout.addView(newBlockView);
+
+                            // PageBlock에서 해당 위치에 블록 변경
+                            // 페이지에 해당 블록 추가
+                            addBlockToPage(blockView.getBlockType(), blockView.getDirection(), index, true);
+                        }
                     }
                 }
 
                 @Override
                 public boolean onDrag(View v, DragEvent event) {
                     // 현재 넣을수 있는 소켓이면 이벤트 체크
-                    if(index == curBlockSocketNum) {
+                    if(index <= curBlockSocketNum) {
                         FrameLayout frameLayout;
 
                         // 뷰가 FrameLayout인지 확인
@@ -892,9 +880,36 @@ public class BlockCodingActivity extends AppCompatActivity {
         blockListView2.setAdapter(blockAdapter2);
     }
 
-    @Override
-    public void onBackPressed() {
-        onClickQuit(null);
+    public void onClickStartExecute(View v){
+        ExecuteModule.getInstance().startExecute();
+    }
+
+    public void onClickStopExecute(View v){
+        ExecuteModule.getInstance().stopExecute();
+    }
+
+    // 물음표 버튼에 적용
+    public void onClickQuestion(View v){
+
+        // 도움말 레이아웃 뷰 생성
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog_question, null);
+
+        // 도움말 대화상자 생성
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+
+        final AlertDialog dialog = builder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        dialogView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 
     // quit 버튼에 적용
@@ -904,5 +919,10 @@ public class BlockCodingActivity extends AppCompatActivity {
         resultIntent.putExtra("pageResult", pageBlock);
         setResult(RESULT_OK, resultIntent);
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        onClickQuit(null);
     }
 }

@@ -14,6 +14,8 @@ public class ExecuteModule {
     public static final int ENDCODE = 101;
     // 키듀카 중지 명령
     public static final int STOPCODE = 102;
+    // 키듀카 종료 명령
+    public static final int EXITCODE = 103;
 
     // 분석해서 실행할 메인 블록 페이지
     private PageBlock m_mainPageBlock;
@@ -21,9 +23,13 @@ public class ExecuteModule {
     private BluetoothHandler m_bluetoothHandler;
     private static ExecuteModule m_executeModule;
 
+    // 블록코딩 액티비티의 첫 페이지가 열려있는지 체크하는 변수
+    boolean m_isFirstPageOpen;
+
     private ExecuteModule(){
         m_mainPageBlock = null;
         m_bluetoothHandler = null;
+        m_isFirstPageOpen = false;
     }
 
     // ExecuteMoudle 객체를 얻음
@@ -33,6 +39,14 @@ public class ExecuteModule {
         }
 
         return m_executeModule;
+    }
+
+    public void setIsFirstPageOpen(boolean isFirstPageOpen){
+        m_isFirstPageOpen = isFirstPageOpen;
+    }
+
+    public boolean getIsFirstPageOpen(){
+        return m_isFirstPageOpen;
     }
 
     // 블루투스 핸들러 설정
@@ -46,14 +60,7 @@ public class ExecuteModule {
 
     // 메인 페이지 블록 설정
     public void setMainPageBlock(PageBlock mainPageBlock){
-        // 설정 블록이 null이라면 실행 모듈 초기화
-        if(mainPageBlock == null){
-            m_mainPageBlock = mainPageBlock;
-        }
-        // 설정 블록이 블록코딩 첫 페이지라면 설정
-        else if(m_mainPageBlock == null){
-            m_mainPageBlock = mainPageBlock;
-        }
+        m_mainPageBlock = mainPageBlock;
     }
     // 메인 페이지 블록 반환
     public PageBlock getMainPageBlock(){
@@ -76,31 +83,33 @@ public class ExecuteModule {
 
     // PageBlock에 있는 코드들을 순서대로 전송함
     public void sendBlockCode(PageBlock pageBlock){
-        for(int i = 0;i < pageBlock.getCurBlockNum();i++){
-            Block block = pageBlock.getBlock(i);
-            switch(block.getBlockType()){
+        if(pageBlock != null) {
+            for (int i = 0; i < pageBlock.getCurBlockNum(); i++) {
+                Block block = pageBlock.getBlock(i);
+                switch (block.getBlockType()) {
 
-                case Block.MOVEBLOCK:
-                case Block.ROTATEBLOCK:
-                case Block.STOPBLOCK:
-                    m_bluetoothHandler.sendData(makeByteData(block.makeIntermediateCode()));
-                    break;
+                    case Block.MOVEBLOCK:
+                    case Block.ROTATEBLOCK:
+                    case Block.STOPBLOCK:
+                        m_bluetoothHandler.sendData(makeByteData(block.makeIntermediateCode()));
+                        break;
 
-                case Block.REPEATBLOCK:
-                    m_bluetoothHandler.sendData(makeByteData(block.makeIntermediateCode()));
-                    sendBlockCode(((RepeatBlock)block).getRepeatPage());
-                    break;
+                    case Block.REPEATBLOCK:
+                        m_bluetoothHandler.sendData(makeByteData(block.makeIntermediateCode()));
+                        sendBlockCode(((RepeatBlock) block).getRepeatPage());
+                        break;
 
-                case Block.CONDITIONBLOCK:
-                    m_bluetoothHandler.sendData(makeByteData(block.makeIntermediateCode()));
-                    m_bluetoothHandler.sendData(makeByteData(((ConditionBlock)block).getCheckBlock().makeIntermediateCode()));
-                    sendBlockCode(((ConditionBlock)block).getOkPage());
-                    sendBlockCode(((ConditionBlock)block).getNoPage());
-                    break;
+                    case Block.CONDITIONBLOCK:
+                        m_bluetoothHandler.sendData(makeByteData(block.makeIntermediateCode()));
+                        m_bluetoothHandler.sendData(makeByteData(((ConditionBlock) block).getCheckBlock().makeIntermediateCode()));
+                        sendBlockCode(((ConditionBlock) block).getOkPage());
+                        sendBlockCode(((ConditionBlock) block).getNoPage());
+                        break;
 
-                case Block.PAGEBLOCK:
-                    sendBlockCode((PageBlock)block);
-                    break;
+                    case Block.PAGEBLOCK:
+                        sendBlockCode((PageBlock) block);
+                        break;
+                }
             }
         }
     }
@@ -121,8 +130,16 @@ public class ExecuteModule {
     // 코드 중지
     public void stopExecute(){
         if(m_bluetoothHandler != null){
-            int[] stopCode = {STARTCODE};
+            int[] stopCode = {STOPCODE};
             m_bluetoothHandler.sendData(makeByteData(stopCode));
+        }
+    }
+
+    // 키듀카 종료
+    public void exitCar(){
+        if(m_bluetoothHandler != null){
+            int[] exitCode = {EXITCODE};
+            m_bluetoothHandler.sendData(makeByteData(exitCode));
         }
     }
 }

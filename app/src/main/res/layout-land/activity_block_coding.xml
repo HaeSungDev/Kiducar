@@ -383,22 +383,28 @@
         android:layout_centerHorizontal="true"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/startBtn"
+            android:id="@+id/startExecuteBtn"
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:text="코드 실행"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:background="@drawable/button" style="@style/ButtonText"/>
+            android:background="@drawable/button" style="@style/ButtonText"
+            android:onClick="onClickStartExecute"
+            android:visibility="invisible"
+            android:clickable="false"/>
 
         <Button
-            android:id="@+id/stopBtn"
+            android:id="@+id/stopExecuteBtn"
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:text="실행 중지"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:background="@drawable/button" style="@style/ButtonText"/>
+            android:background="@drawable/button" style="@style/ButtonText"
+            android:onClick="onClickStopExecute"
+            android:visibility="invisible"
+            android:clickable="false"/>
     </LinearLayout>
 
     <Button
@@ -410,7 +416,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginBottom="2dp"
         android:background="@drawable/question"
-        />
+        android:onClick="onClickQuestion"/>
 
     <Button
         android:id="@+id/quitBtn"

@@ -48,8 +48,12 @@ public class ConditionBlock extends Block {
 
     // 추상 메소드 구현. 중간 코드 생성
     public int[] makeIntermediateCode(){
-        int okPageNum = m_okPage.getCurBlockNum();
-        int noPageNum = m_noPage.getCurBlockNum();
+        int okPageNum = 0;
+        if(m_okPage != null)
+            okPageNum = m_okPage.getCurBlockNum();
+        int noPageNum = 0;
+        if(m_noPage != null)
+            noPageNum = m_noPage.getCurBlockNum();
 
         int[] conditionData = {m_blockType, okPageNum, noPageNum};
         int[] checkBlockData = m_checkBlock.makeIntermediateCode();

@@ -40,7 +40,9 @@ public class RepeatBlock extends Block {
 
     // 추상 메소드 구현. 중간 코드 생성
     public int[] makeIntermediateCode(){
-        int repeatPageBlockNum = m_repeatPage.getCurBlockNum();
+        int repeatPageBlockNum = 0;
+        if(m_repeatPage != null)
+            repeatPageBlockNum = m_repeatPage.getCurBlockNum();
 
         int[] data = {m_blockType, m_repeatNum, repeatPageBlockNum};
 

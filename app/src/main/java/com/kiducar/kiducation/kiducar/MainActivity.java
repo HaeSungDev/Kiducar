@@ -3,6 +3,7 @@ package com.kiducar.kiducation.kiducar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.kiducar.kiducation.kiducar.blockinterface.ExecuteModule;
 import com.kiducar.kiducation.kiducar.bluetooth.BluetoothHandler;
@@ -19,9 +20,6 @@ public class MainActivity extends AppCompatActivity {
         BluetoothHandler btHandler = new BluetoothHandler(this);
         ExecuteModule.getInstance().setBluetoothHandler(btHandler);
         btHandler.enableBluetooth();
-
-        Intent blockCodingIntent = new Intent(getApplicationContext(), BlockCodingActivity.class);
-        startActivity(blockCodingIntent);
     }
 
     @Override
@@ -48,5 +46,23 @@ public class MainActivity extends AppCompatActivity {
         if(ExecuteModule.getInstance().getBluetoothHandler() != null)
             ExecuteModule.getInstance().getBluetoothHandler().destroy();
         super.onDestroy();
+    }
+
+    public void onClickSend(View v){
+        ExecuteModule.getInstance().setIsFirstPageOpen(false);
+        Intent blockCodingIntent = new Intent(getApplicationContext(), BlockCodingActivity.class);
+        blockCodingIntent.putExtra("page", ExecuteModule.getInstance().getMainPageBlock());
+        startActivity(blockCodingIntent);
+    }
+
+    public void onClickExit(View v){
+        ExecuteModule.getInstance().exitCar();
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        super.onBackPressed();
     }
 }
