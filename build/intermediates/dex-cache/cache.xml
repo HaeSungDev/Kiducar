@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_4e5e85b09f7729d9e13ad766473b853bc646f592\classes.dex" />
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_dfaf12a14973133f528940f2b69cadca0ca22f7a\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_826582d74208d165e20dc7bd883a06b6f2e52578\classes.dex" />
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_66d46bd5c35922d3f9c170b8b3bae7a11b92c66f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -39,21 +39,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="000db7eee101afb2f2347e21c727e12f29207b69">
-        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_91f20a262f488a62c8bc6633a184ab92c0685e63\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
         <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_259eb2bab34ad5d7cc1598c82212dd3c64f7e832\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_c01c8e3a4dec11fe779bb4d09f8f990264ddfe6f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -75,57 +75,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_e45076e964c8d33d382c03cc8f93c3272c62b8cd\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_a15b415dbb6ab2d863cf5901ba72428db54d0fdd\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_167716b04da5ecea6ee41d091c7250703ec01218\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_dfaf12a14973133f528940f2b69cadca0ca22f7a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_66d46bd5c35922d3f9c170b8b3bae7a11b92c66f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_c01c8e3a4dec11fe779bb4d09f8f990264ddfe6f\classes.dex" />
+        sha1="c0edcc3d807cc25b9c3e5db8bba81f545c24bbae">
+        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_91f20a262f488a62c8bc6633a184ab92c0685e63\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -153,6 +108,51 @@
         revision="24.0.2"
         sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
         <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_db4c759f80f479add6f120c38f121ee935edc909\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_e45076e964c8d33d382c03cc8f93c3272c62b8cd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_a15b415dbb6ab2d863cf5901ba72428db54d0fdd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_4e5e85b09f7729d9e13ad766473b853bc646f592\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_167716b04da5ecea6ee41d091c7250703ec01218\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="D:\AndroidProject\AndroidStudioProjects\Kiducar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_826582d74208d165e20dc7bd883a06b6f2e52578\classes.dex" />
     </item>
 
 </items>

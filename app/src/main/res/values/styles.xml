@@ -24,5 +24,9 @@
         <item name="android:shadowRadius">2</item>
     </style>
 
+    <style name="MyButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">#a9a9a9 </item>
+        <item name="colorButtonNormal">#f5deb3  </item>
+    </style>
 
 </resources>

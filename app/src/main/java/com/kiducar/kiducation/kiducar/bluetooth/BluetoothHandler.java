@@ -35,7 +35,7 @@ public class BluetoothHandler {
     // 소켓 출력 스트림
     OutputStream mOutputStream;
 
-    public static final int REQUEST_ENABLE_BT = 3;
+    public static final int REQUEST_ENABLE_BT = 2000;
 
     public BluetoothHandler(AppCompatActivity ac) {
         mActivity = ac;
