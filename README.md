@@ -7,7 +7,10 @@
 이 저장소는 안드로이드 어플리케이션 소스코드를 저장하고 있습니다. <br>
 <br>
 ## 사용 방법
-1. git clone 명령어를 이용해 저장소를 복사하거나 저장소의 download 기능을 이용합니다. <br>
+* git clone 명령어를 이용해 저장소를 복사하거나 저장소의 download 기능을 이용합니다. <br>
 ```bash
 $ git clone https://github.com/xods1024/Kiducar/edit/master/README.md
 ```
+* android studio 설치합니다. <br>
+  - 설치 시 sdk api 23 marshmallow를 설치합니다. <br>
+[install android studio](https://developer.android.com/studio/index.html?hl=ko)
