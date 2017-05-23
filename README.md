@@ -33,3 +33,7 @@ $ git clone https://github.com/xods1024/Kiducar/edit/master/README.md
 
 ![IMAGE ALT TEXT](http://img.youtube.com/vi/RXiHn9HktLw/0.jpg) <br>
 [자동차 시연 동영상 ](https://youtu.be/RXiHn9HktLw) <br>
+
+## Contribute
+
+* 프로젝트에 관해 궁금한 점 또는 건의사항이 있으시면 issue에 남겨주시거나 xods1025@gmail.com로 메일 주시기 바랍니다.
