@@ -10,7 +10,7 @@
 
 * git clone 명령어를 이용해 저장소를 복사하거나 저장소의 download 기능을 이용합니다. <br>
 ```bash
-$ git clone https://github.com/xods1024/Kiducar/edit/master/README.md
+$ git clone https://github.com/xods1024/Kiducar/
 ```
 * android studio 설치합니다. <br>
   - 설치 시 sdk api 23 marshmallow를 설치합니다. <br>
